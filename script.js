@@ -4,8 +4,14 @@ function openTool(toolName) {
         tools[i].style.display = 'none';
     }
 
-    var selectedTool = document.getElementById(toolName);
-    if (selectedTool) {
-        selectedTool.style.display = 'block';
+    if (toolName === 'tool1') {
+        // 如果是工具1，直接跳转到 antlv7
+        window.location.href = 'https://l7editor.antv.antgroup.com';
+    } else {
+        // 否则显示选定的工具内容
+        var selectedTool = document.getElementById(toolName);
+        if (selectedTool) {
+            selectedTool.style.display = 'block';
+        }
     }
 }
